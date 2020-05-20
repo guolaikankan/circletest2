@@ -7,8 +7,9 @@ jobs:
     steps:
       - run: pwd
       - checkout # check out the code in the project directory
-      - run: git rev-parse HEAD
-      - run: git rev-parse --short HEAD
+      - run: a=$(git rev-parse HEAD); echo ${a}
+      - run: b=$(git rev-parse --short HEAD)
+      - run: echo ${b}
       - run: ls
       - run: echo "hello world" # run the `echo` command
       - run: pwd
